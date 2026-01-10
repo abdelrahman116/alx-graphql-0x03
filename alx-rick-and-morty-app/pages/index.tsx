@@ -1,13 +1,13 @@
+import ErrorBoundary from '@/components/ErrorBoundary';
+import ErrorProneComponent from '@/components/ErrorProneComponent';
 
-import ErrorProneComponent from "@/components/ErrorProneComponent";
-import ErrorBoundary from "@/components/ErrorBoundary";
-
-
-
-export default function Home() {
-    return (
+const Home: React.FC = () => {
+  return (
     <ErrorBoundary>
-      <ErrorProneComponent />
+      <ErrorProneComponent shouldFail={false} />
+      <div>Welcome to the Rick and Morty App!</div>
     </ErrorBoundary>
   );
-}
+};
+
+export default Home;
